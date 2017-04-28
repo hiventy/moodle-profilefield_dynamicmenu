@@ -52,7 +52,7 @@ class profile_field_dynamicmenu extends profile_field_base {
         // First call parent constructor.
         parent::__construct($fieldid, $userid);
         // Only if we actually need data.
-        if ($fieldid !== 0 && $userid !== 0) {
+        if ($fieldid !== 0) {
             $mykey = $fieldid.','.$userid; // It will always work because they are number, so no chance of ambiguity.
             if (array_key_exists($mykey , self::$acalls)) {
                 $rs = self::$acalls[$mykey];
